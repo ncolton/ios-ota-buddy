@@ -19,14 +19,14 @@ This tool will help you extract the provisioning profile used, create the necess
 
 ##### Setup
 1. Build your application archive with Xcode or xcodebuild
-2. In Xcode Organizer, select Share, sign your application and save the application.ipa
-3. Move the application.ipa and otabuddy.sh file to your distribution folder (on the web-server/dropbox)
-4. Enable execution "chmod +x otabuddy.sh"
+2. In Xcode Organizer, select Share, sign your application and save the _application.ipa_
+3. Move the _application.ipa_ and _otabuddy.sh_ file to your distribution folder (on the web-server/dropbox)
+4. Enable execution ```chmod +x otabuddy.sh```
 
 #### Usage
-5. Extract the .mobileprovision to adhoc.mobileprovision by running "./otabuddy provisioning application.ipa adhoc.mobileprovision"
-6. Create the .plist file by running "./otabuddy.sh plist application.ipa http://domain.com/path/distribution/application.ipa application.plist"
-7. Generate the itms-services link by running "./otabuddy.sh itms http://domain.com/path/distribution/application.plist"
+5. Extract the _.mobileprovision_ to _adhoc.mobileprovision_ by running ```./otabuddy provisioning application.ipa adhoc.mobileprovision```
+6. Create the .plist file by running ```./otabuddy.sh plist application.ipa http://domain.com/path/distribution/application.ipa application.plist```
+7. Generate the itms-services link by running ```./otabuddy.sh itms http://domain.com/path/distribution/application.plist```
 8. Create a HTML-file with an anchor with the itms-link created in step 7 and a link to the provisioning profile extracted in 5.
 9. Visit your HTML-file and download your application. Remember to download the provisioning profile first.
 10. Enjoy!
