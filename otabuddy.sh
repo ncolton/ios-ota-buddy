@@ -80,16 +80,17 @@ itms()
 
 printusage()
 {
+	script_name=`basename $0`
 	echo "Usage:"
-	echo $"$0 provisioning: Will extract the embedded provisioning profile from your application.ipa"
-	echo $" $0 provisioning file.ipa, will print the provisioning profile to STDOUT, pipe it where you want (can be used to download)"
-	echo $" $0 provisioning file.ipa name.mobileprovision, will extract the provisioning profile to name.mobileprovision"
-	echo ""
-	echo $"$0 plist: Will generate the .plist required for OTA-distribution"
-	echo $" $0 plist file.ipa http://domain.com/path/distribution/file.ipa application.plist"
-	echo ""
-	echo $"$0 itms: Will generate an itms-services link that can be used to download your application."
-	echo $" $0 itms http://domain.com/path/distribution/application.plist"
+	echo "$script_name provisioning: Will extract the embedded provisioning profile from your application.ipa"
+	echo " $script_name provisioning file.ipa, will print the provisioning profile to STDOUT, pipe it where you want (can be used to download)"
+	echo " $script_name provisioning file.ipa name.mobileprovision, will extract the provisioning profile to name.mobileprovision"
+	echo
+	echo "$script_name plist: Will generate the .plist required for OTA-distribution"
+	echo " $script_name plist file.ipa http://domain.com/path/distribution/file.ipa application.plist"
+	echo
+	echo "$script_name itms: Will generate an itms-services link that can be used to download your application."
+	echo " $script_name itms http://domain.com/path/distribution/application.plist"
 	exit 1
 }
 
